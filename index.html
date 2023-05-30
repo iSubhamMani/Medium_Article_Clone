@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Improving Performance with HTTP Streaming</title>
+    </head>
+
+    <body>
+        <h1>Improving Performance with HTTP Streaming</h1>
+        <p>How HTTP Streaming can improve page performance and how Airbnb enabled it on an existing codebase</p>
+        <h2>Introduction</h2>
+        <p>You may have heard a joke that the <strong>Internet is a series of tubes.</strong>
+            <br>
+            In this blog post, we’re going to talk about how we get a cool, 
+            refreshing stream of 
+            <br>
+            Airbnb.com bytes into your browser as quickly as 
+            possible using <strong>HTTP Streaming.</strong>
+            <p>
+                Let’s first understand what streaming means. Imagine we had a spigot and two options:
+                <ul>
+                    <li>Fill a big cup, and then pour it all down the tube (the “buffered” strategy)</li>
+                    <li>Connect the spigot directly to the tube (the “streaming” strategy)</li>
+                </ul>
+            </p>
+        </p>
+
+        <h2>Implementing Streaming at Airbnb</h2>
+        <p>
+            Streaming has clear advantages, but most websites today still rely on a buffered approach to 
+            <br>
+            generate responses. One reason for this is the additional engineering effort required 
+            <br>
+            to break the page into independent chunks. This just isn’t feasible sometimes.
+            <br>
+            For example, if all of the content on the page relies on a <i>backend query</i> , then we won’t be able to send anything until that query finishes.
+        </p>
+    </body>
+</html>
