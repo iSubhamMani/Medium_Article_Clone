@@ -34,6 +34,8 @@ p{
 .post-image-1 img, .post-image-2 img{
     width: 700px;
     height: auto;
+    border: 1px solid white;
+    border-radius: 16px;
 }
 
 .post-header-links{
@@ -68,11 +70,6 @@ p{
 
 .post-author a{
     color: black;
-}
-
-img{
-    border: 1px solid white;
-    border-radius: 16px;
 }
 
 .img-share, .img-play{
