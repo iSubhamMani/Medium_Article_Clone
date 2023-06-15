@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.root{
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.post-image-1 img{
+    width: 700px;
+    height: auto;
+}
