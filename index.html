@@ -3,45 +3,75 @@
     <head>
         <meta charset="UTF-8">
         <title>Improving Performance with HTTP Streaming</title>
+        <link rel="stylesheet" href="./style.css">
     </head>
 
     <body>
-        <h1>Improving Performance with HTTP Streaming</h1>
-        <p>How HTTP Streaming can improve page performance and how Airbnb enabled it on an existing codebase</p>
-        <p>
-            <strong>By:</strong> <a href="https://www.linkedin.com/in/victorhlin/" target="_blank">Victor Lin</a>
-        </p>
+        <div class="root">
+            <div class="post-header">
+                <h1 class="post-title">Improving Performance with HTTP Streaming</h1>
 
-        <p>
-            <img src="./images/placeholder-image.jpg" width="640" height="360" alt="HTTP Streaming">
-        </p>
+                <div class="post-header-links">
+                    <div class="post-header-links-left">
+                        <a href="#" class="img-clap"><img src="./images/clap.png" alt=""></a>
+                        <a href="#" class="img-comments"><img src="./images/comments.png" alt="" ></a>
+                    </div>
 
-        <h2>Introduction</h2>
-        <p>You may have heard a joke that the <strong>Internet is a series of tubes.</strong>
-            <br>
-            In this blog post, we’re going to talk about how we get a cool, 
-            refreshing stream of 
-            <br>
-            Airbnb.com bytes into your browser as quickly as 
-            possible using <strong>HTTP Streaming.</strong>
-            <p>
-                Let’s first understand what streaming means. Imagine we had a spigot and two options:
-                <ul>
-                    <li>Fill a big cup, and then pour it all down the tube (the “buffered” strategy)</li>
-                    <li>Connect the spigot directly to the tube (the “streaming” strategy)</li>
-                </ul>
-            </p>
-        </p>
+                    <div class="post-header-links-right">
+                        <a href="#" class="img-ribbon"><img src="./images/ribbon.png" alt=""></a>
+                        <a href="#" class="img-play"><img src="./images/play-button.png" alt="" ></a>
+                        <a href="#" class="img-share"><img src="./images/share.png" alt="" ></a>
+                    </div>
+                    
+                </div>
+                <p class="post-about">How HTTP Streaming can improve page performance and how Airbnb enabled it on an existing codebase</p>
+                <p class="post-author">
+                    <strong>By:</strong> <a href="https://www.linkedin.com/in/victorhlin/" target="_blank">Victor Lin</a>
+                </p>
+            </div>
 
-        <h2>Implementing Streaming at Airbnb</h2>
-        <p>
-            Streaming has clear advantages, but most websites today still rely on a buffered approach to 
-            <br>
-            generate responses. One reason for this is the additional engineering effort required 
-            <br>
-            to break the page into independent chunks. This just isn’t feasible sometimes.
-            <br>
-            For example, if all of the content on the page relies on a <i>backend query</i> , then we won’t be able to send anything until that query finishes.
-        </p>
+            <div class="post-image-1">
+                <img src="./images/placeholder-image.jpg" alt="Placeholder Image">
+            </div>
+
+            <div class="post-text">
+                <h1>Introduction</h1>
+                <p>You may have heard a joke that the <strong>Internet is a series of tubes.</strong>
+                    In this blog post, we’re going to talk about how we get a cool, 
+                    refreshing stream of 
+                    Airbnb.com bytes into your browser as quickly as 
+                    possible using <strong>HTTP Streaming.</strong>
+                    <p>
+                        Let’s first understand what streaming means. Imagine we had a spigot and two options:
+                        <ul>
+                            <li>Fill a big cup, and then pour it all down the tube (the “buffered” strategy)</li>
+                            <li>Connect the spigot directly to the tube (the “streaming” strategy)</li>
+                        </ul>
+                    </p>
+                </p>
+        
+                <h1>Implementing Streaming at Airbnb</h1>
+                <p>
+                    Streaming has clear advantages, but most websites today still rely on a buffered approach to 
+                    generate responses. One reason for this is the additional engineering effort required 
+                    to break the page into independent chunks. This just isn’t feasible sometimes.
+                    For example, if all of the content on the page relies on a <i>backend query</i> , then we won’t be able to send anything until that query finishes.
+                </p>
+                <p>
+                    However, there’s one use case that’s universally applicable. 
+                    We can use streaming to reduce network waterfalls. This term refers to when one network request triggers another, resulting in a cascading series of sequential requests. 
+                    This is easily visualized in a tool like Chrome’s Waterfall:
+                </p>
+                <div class="post-image-2">
+                    <img src="./images/chrome-waterfall.jpg" alt="Chrome Waterfall">
+                </div>
+                <p class="waterfall-img-description">Chrome Network Waterfall illustrating a cascade of sequential requests</p>
+                <p>
+                    Most web pages rely on external JavaScript and CSS files linked within the HTML, resulting in a network waterfall — downloading the HTML triggers JavaScript and CSS downloads. As a result, 
+                    it’s a best practice to place all CSS and JavaScript tags near the beginning of the HTML in the <head> tag. This ensures that the browser sees them earlier. 
+                    With streaming, we can reduce this delay further, by sending that portion of the <head> tag first.
+                </p>
+            </div>
+        </div>
     </body>
 </html>

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: poppins;
+    src: url(./fonts/Poppins-Light.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+*{
+    font-family: poppins;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -5,11 +16,65 @@ body{
 
 .root{
     width: 700px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 50px auto;
 }
 
-.post-image-1 img{
+.post-title{
+    font-size: 40px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.post-text h1{
+    font-size: 28px;
+}
+
+.post-image-1 img, .post-image-2 img{
     width: 700px;
     height: auto;
+}
+
+.post-header-links{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #F2F2F2;
+    border-top: 1px solid #F2F2F2;
+}
+
+.clap-count, .comments-count{
+    text-decoration: none;
+}
+
+.img-comments{
+    margin-left: 24px;
+}
+
+.img-clap, .img-comments, .img-ribbon{
+    opacity: 0.7;
+}
+
+.post-header-links-right a{
+    padding-left: 16px;
+}
+
+.waterfall-img-description{
+    font-size: 13px;
+    color: #797999;
+    text-align: center;
+}
+
+.post-author a{
+    color: black;
+}
+
+img{
+    border: 1px solid white;
+    border-radius: 16px;
+}
+
+.img-share, .img-play{
+    opacity: 0.5;
 }
