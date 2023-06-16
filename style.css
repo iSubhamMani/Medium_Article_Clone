@@ -59,7 +59,7 @@ p{
 }
 
 .post-header-links-right a{
-    padding-left: 16px;
+    padding-left: 32px;
 }
 
 .waterfall-img-description{
@@ -74,4 +74,41 @@ p{
 
 .img-share, .img-play{
     opacity: 0.5;
+}
+
+.post-info{
+    display: flex;
+}
+
+.post-publication-details{
+    display: flex;
+    padding: 0;
+}
+
+.post-publication-details p{
+    font-size: 14px;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.post-author-dp-container{
+    margin-right: 16px;
+}
+
+.post-info{
+    margin-bottom: 32px;
+}
+
+.post-author-credentials a{
+    text-decoration: none;
+    padding-right: 8px;
+}
+
+.post-author-name{
+    color: black;
+    font-weight: 550;
+}
+
+.post-author-follow{
+    color: #1A9480;
 }
